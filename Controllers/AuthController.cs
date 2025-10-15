@@ -41,7 +41,7 @@ namespace JwtAuthDotNet9_2025.Controllers
         }
 
         [HttpPost("refresh-token")]
-        public async Task<ActionResult<TokenResponseDto>> RefrshToken(RefreshTokenRequestDto request)
+        public async Task<ActionResult<TokenResponseDto>> RefreshToken(RefreshTokenRequestDto request)
         {
             var result = await authService.RefreshTokenAsync(request);
             if (result is null || result.AcessToken is null || result.RefreshToken is null)
